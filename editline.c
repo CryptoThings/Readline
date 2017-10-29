@@ -206,8 +206,6 @@ TTYstring(p)
 STATIC unsigned int
 TTYget()
 {
-    CHAR        c;
-
     TTYflush();
     if (Pushed) {
         Pushed = 0;
@@ -688,7 +686,6 @@ readline(prompt)
     CONST char  *prompt;
 {
     CHAR        *line;
-    int         s;
 
     if (Line == NULL) {
         Length = MEM_INC;
